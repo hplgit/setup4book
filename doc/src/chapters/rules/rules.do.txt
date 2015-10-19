@@ -1,4 +1,4 @@
-This ${CHAPTER} describes the file structure of book projects.
+ This ${CHAPTER} describes the file structure of book projects.
 The setup can of course be used for proceedings and theses as well.
 
 !split
@@ -673,14 +673,6 @@ a dark blue color in the electronic version). The two files are
 named `mychap.pdf` and `mychap-4print.pdf`, respectively, and
 copied to `doc/pub/mychap/pdf` for publishing.
 
-
-!bc shpro
-cp new_dictionary.txt~ .dict4spell.txt
-!ec
-(Make sure `.dict4spell.txt` is version controlled by Git.)
-The `make.sh` script will not proceed with compilation of the documents
-before the spell check is run without errors.
-
 !bnotice Tip: use tinyurl.com for shortening long URLs
 When compiling a document to LaTeX for *printing on paper* (`--device=paper`),
 URLs in hyperlinks will appear as footnotes. Very long URLs may then exceed
@@ -723,6 +715,12 @@ mistakes in the original documents and run the `make.sh` script again.
 When `misspellings.txt~` at some point contains acceptable words only,
 you update the dictionary by
 
+!bc shpro
+cp new_dictionary.txt~ .dict4spell.txt
+!ec
+(Make sure `.dict4spell.txt` is version controlled by Git.)
+The `make.sh` script will not proceed with compilation of the documents
+before the spell check is run without errors.
 
 idx{`make_html.sh`}
 
